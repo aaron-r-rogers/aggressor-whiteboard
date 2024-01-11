@@ -1,0 +1,154 @@
+/* General reset for padding and margin to avoid browser inconsistencies */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+input {
+    border: none !important;
+    width: 100%;
+    padding: 4px;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.whiteboard {
+    width: 100%;
+    border: 1px solid #ddd;
+    margin: 2rem auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.transponderTable {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-bottom: 20px;
+    table-layout: auto;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Table header styles */
+.transponderTable thead tr:first-child th:first-child {
+  border-top-left-radius: 8px; /* Rounded top left corner */
+}
+.transponderTable thead tr:first-child th:last-child {
+  border-top-right-radius: 8px; /* Rounded top right corner */
+}
+
+/* Apply border-radius to the last row's first and last cell */
+.transponderTable tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 8px; /* Rounded bottom left corner */
+}
+.transponderTable tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 8px; /* Rounded bottom right corner */
+}
+
+.transponderTable thead {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.transponderTable th:not(.tableTitle):hover {
+    background-color: #0069d9;
+}
+
+.tableTitle {
+    background-color: #333;
+    color: #fff;
+    font-size: 1.5em;
+    padding: 10px 0;
+}
+
+.transponderTable th:not(.tableTitle),
+.transponderTable td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    min-width: 60px;
+}
+
+.cellSmall {
+    width: 7%;
+}
+.cellMedium {
+    width: 12%;
+}
+.cellLarge {
+    width: 15%;
+}
+
+.transponderTable tbody td:hover {
+    background-color: #f8f8f8;
+}
+
+button {
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.addButton {
+    background-color: #28a745;
+}
+.addButton:hover {
+    background-color: #218838;
+}
+
+.removeButton {
+    background-color: #dc3545;
+}
+.removeButton:hover {
+    background-color: #c82333;
+}
+
+input {
+    outline: none;
+}
+
+input:active,
+input:focus {
+    background-color: #efefef;
+    outline: none;
+    border: 1px solid #ddd;
+}
+
+.buttonContainer {
+    display: flex;
+    gap: 15px;
+}
+
+.sortableHeader {
+    cursor: pointer;
+}
+
+.sortingArrow {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.arrowUp::before {
+    content: '↑';
+    color: white;
+}
+
+.arrowDown::before {
+    content: '↓';
+    color: white;
+}
