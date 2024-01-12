@@ -10,6 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@fontsource/roboto": "^5.0.8",
+    "@mui/icons-material": "^5.15.4",
+    "@mui/material": "^5.15.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -24,5 +29,52 @@
     "eslint-plugin-react-refresh": "^0.4.5",
     "typescript": "^5.2.2",
     "vite": "^5.0.8"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "browser": true,
+      "es2020": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:react/recommended",
+      "plugin:react-hooks/recommended"
+    ],
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    },
+    "ignorePatterns": [
+      "dist",
+      ".eslintrc.cjs"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "plugins": [
+      "react-refresh"
+    ],
+    "rules": {
+      "react-refresh/only-export-components": [
+        "warn",
+        {
+          "allowConstantExport": true
+        }
+      ],
+      "react/react-in-jsx-scope": "off",
+      "max-len": [
+        "error",
+        {
+          "code": 160
+        }
+      ],
+      "@typescript-eslint/no-var-requires": 0
+    }
   }
 }
