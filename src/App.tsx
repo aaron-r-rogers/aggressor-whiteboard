@@ -4,30 +4,31 @@ import SignalCalculator from "./components/SignalCalculator";
 import SatelliteInfo from "./components/SatelliteInfo";
 
 import Grid from '@mui/material/Unstable_Grid2';
-import Box from '@mui/material/Box';
 
 function App() {
   return (
     <Grid container spacing={2}>
-      <Box display="flex" width="100%">
-        <Box width="50%" display="flex" flexDirection="column">
-          <Grid xs={12}>
-            <SatelliteInfo />
-          </Grid>
-        </Box>
-        <Box width="50%" display="flex" flexDirection="column">
-          <Grid xs={12}>
+      <Grid container spacing={1}>
+
+        <Grid xs={6}>
+          <SatelliteInfo />
+        </Grid>
+
+        <Grid xs={6}>
+          <Grid>
             <Hounddog />
           </Grid>
-          <Grid xs={12}>
+          <Grid>
             <SignalCalculator />
           </Grid>
-        </Box>
-      </Box>
+        </Grid>
+
+      </Grid>
 
       <Grid xs={12}>
         <TransponderTable />
       </Grid>
+
     </Grid>
   )
 }

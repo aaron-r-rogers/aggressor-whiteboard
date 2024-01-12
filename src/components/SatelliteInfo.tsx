@@ -45,7 +45,16 @@ const SatelliteInfo: React.FC = () => {
     };
 
     return (
-        <TableContainer component={Paper} elevation={3} sx={{ margin: 3, width: 'auto' }}>
+        <TableContainer
+            component={Paper}
+            elevation={3} 
+            sx={{
+                margin: 3,
+                width: 'auto',
+                display: 'flex',
+                height: '96%'
+            }}
+        >
             <Table>
                 <TableHead>
                     <StyledTableRow>

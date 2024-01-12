@@ -61,7 +61,7 @@ const CheckListTable: React.FC = () => {
                     {steps.map((step) => (
                         <StyledTableRow key={step}>
                             <StyledTableCell style={{ width: '65%' }}>
-                                <Typography variant="h6">
+                                <Typography variant="subtitle1">
                                     {step}
                                 </Typography>
                             </StyledTableCell>
@@ -75,26 +75,25 @@ const CheckListTable: React.FC = () => {
                         </StyledTableRow>
                     ))}
                     <StyledTableRow>
-                        <StyledTableCell style={{ width: '65%' }}>
-                            <Typography variant="h5">
+                        <StyledTableCell style={{ width: '60%' }}>
+                            <Typography variant="h6">
                                 ASPEN
                             </Typography>
                         </StyledTableCell>
-                        <StyledTableCell style={{ width: '35%', textAlign: 'center' }}>
-                        <TextField
-                            label="Z"
-                            value={(checkedState['ASPEN'] as { z: string; l: string }).z}
-                            onChange={(e: ChangeEvent<HTMLInputElement>) => handleTextChange('z', e.target.value)}
-                            fullWidth
-                            margin="dense"
-                        />
-                        <TextField
-                            label="L"
-                            value={(checkedState['ASPEN'] as { z: string; l: string }).l}
-                            onChange={(e: ChangeEvent<HTMLInputElement>) => handleTextChange('l', e.target.value)}
-                            fullWidth
-                            margin="dense"
-                        />
+                        <StyledTableCell style={{ width: '40%', textAlign: 'center' }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+                            <TextField
+                                label="Z"
+                                value={(checkedState['ASPEN'] as { z: string; l: string }).z}
+                                onChange={(e: ChangeEvent<HTMLInputElement>) => handleTextChange('z', e.target.value)}
+                                style={{ marginRight: '10px' }} // Optional, for spacing between the fields
+                            />
+                            <TextField
+                                label="L"
+                                value={(checkedState['ASPEN'] as { z: string; l: string }).l}
+                                onChange={(e: ChangeEvent<HTMLInputElement>) => handleTextChange('l', e.target.value)}
+                            />
+                        </div>
                         </StyledTableCell>
                     </StyledTableRow>
                 </TableBody>
