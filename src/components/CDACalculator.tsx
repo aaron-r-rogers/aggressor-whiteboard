@@ -16,7 +16,7 @@ const CDACalculator: React.FC = () => {
     const resetFields = () => {
         setCdaLimit('');
         setAntennaGain('');
-        setSop(1);
+        setSop('1');
         setMaxHpaOut(null);
         setMaxHpaOutWatts(null);
     };
