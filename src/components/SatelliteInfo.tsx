@@ -47,12 +47,11 @@ const SatelliteInfo: React.FC = () => {
     return (
         <TableContainer
             component={Paper}
-            elevation={3} 
+            elevation={12} 
             sx={{
-                margin: 3,
+                margin: 2,
                 width: 'auto',
-                display: 'flex',
-                height: '96%'
+                display: 'flex'
             }}
         >
             <Table>
@@ -69,16 +68,21 @@ const SatelliteInfo: React.FC = () => {
                                 variant='outlined'
                                 sx={{
                                     '& .MuiOutlinedInput-root': {
-                                        borderColor: 'white', // Change the border color
-                                        borderWidth: '2px', // Increase border width
+                                        borderColor: 'white',
+                                        borderWidth: '2px',
                                         '&:hover fieldset': {
-                                            borderColor: 'primary.dark', // Border color on hover
+                                            borderColor: 'primary.dark',
                                         },
                                         '&.Mui-focused fieldset': {
-                                            borderColor: 'secondary.main', // Border color when focused
+                                            borderColor: 'secondary.main',
+                                        },
+                                        '& .MuiOutlinedInput-input': {
+                                            textAlign: 'center',
+                                            fontSize: '1.25rem',
+                                            fontWeight: 'bold',
                                         },
                                     },
-                                    backgroundColor: 'background.paper', // Add background color for contrast
+                                    backgroundColor: 'background.paper',
                                     borderRadius: '4px',
                                 }}
                             />

@@ -91,7 +91,10 @@ const SignalCalculator: React.FC = () => {
 
     return (
         <Box sx={{ padding: 2 }}>
-            <Paper elevation={3} sx={{ padding: 2, marginTop: 2 }}>
+            <Paper elevation={12} sx={{ padding: 2 }}>
+                <Typography variant="h5" gutterBottom>
+                    Signal Calculator
+                </Typography>
                 <Grid container spacing={2}>
                     <Grid item xs={12}>
                         <TextField
@@ -140,7 +143,7 @@ const SignalCalculator: React.FC = () => {
                     <Grid item xs={6}>
                         <Button
                             variant="contained"
-                            color="secondary"
+                            color="primary"
                             onClick={calculateBandwidth}
                             fullWidth
                         >

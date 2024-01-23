@@ -92,7 +92,7 @@ const TransponderTable: React.FC = () => {
     };
 
     return (
-        <TableContainer component={Paper} elevation={3} sx={{ margin: 3, width: 'auto' }}>
+        <TableContainer component={Paper} elevation={12} sx={{ margin: 2, width: 'auto' }}>
             <Table sx={{ minWidth: 650 }} aria-label="Transponder Table">
                 <TableHead>
                     <StyledTableRow>
