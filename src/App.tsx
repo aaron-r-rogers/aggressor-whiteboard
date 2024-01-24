@@ -13,12 +13,12 @@ function App() {
 
       <Grid item xs={12}>
         <Grid container>
-          <Grid item xs={6}>
+          <Grid item xs={12} sm={6}>
             <SatelliteInfo />
             <CDACalculator />
           </Grid>
 
-          <Grid item xs={6}>
+          <Grid item xs={12} sm={6}>
             <Hounddog />
             <SignalCalculator />
           </Grid>
